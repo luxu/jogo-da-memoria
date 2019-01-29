@@ -1,16 +1,37 @@
 const $root = document.querySelector("#root");
 
 const $cardsWrapper = createCardsWrapper();
-const $memoryCard = createMemoryCard("img/icon-collabcode.png","Ícone de um livro da linguagem C++");
-const $memoryCardFront = createMemoryCard("img/icon-c.png","Gueio mascote da collabCode","-front");
+const $memoryCardC = createMemoryCard({
+  nameClass:"-front",
+  src: "img/icon-c.png",
+  alt: "Ícone de um livro da linguagem C++"
+});
 
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
+const $memoryCardJS = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-js.png",
+  alt: "Ícone de um livro da linguagem JavaScript"
+});
+
+const $memoryCardJava = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-java.png",
+  alt: "Ícone de um livro da linguagem Java"
+});
+
+const $memoryCardPHP = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-php.png",
+  alt: "Ícone de um livro da linguagem PHP"
+});
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
